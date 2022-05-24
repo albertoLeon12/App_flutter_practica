@@ -1,3 +1,4 @@
+import 'package:app_mamalona1/screens/images_corousel.dart';
 import 'package:flutter/material.dart';
 
 class FruitApp extends StatefulWidget {
@@ -43,6 +44,15 @@ class _FruitAppState extends State<FruitApp> {
           ],
         ),
         backgroundColor: Colors.amber[200],
+        body: ListView(
+          children: <Widget>[
+            Column(
+              children: <Widget>[
+                CarouseWithIndicatorDemo(),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
