@@ -1,3 +1,5 @@
+import 'package:app_mamalona1/screens/fruitapp_screen.dart';
+import 'package:app_mamalona1/screens/login_screen.dart';
 import 'package:app_mamalona1/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 

@@ -58,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: Image.asset("images/perfil.png"),
                       ),
                       Text(
-                        "Sing In",
+                        "Log In",
                         style: TextStyle(
                           color: Colors.black,
                           fontFamily: "OpenSans",
@@ -77,6 +77,22 @@ class _LoginScreenState extends State<LoginScreen> {
                       _builForgetPass(),
                       _builRemeber(),
                       _builButtonLogin(),
+                      Row(
+                        children: [
+                          Text(
+                            "No tienes centa?",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                "Sig in",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ))
+                        ],
+                      )
                     ],
                   ),
                 ),
@@ -254,23 +270,24 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void _showAlertDialog() {
     showDialog(
-        context: context,
-        builder: (buildcontext) {
-          return AlertDialog(
-            title: Text("Vuelva a intentarlo"),
-            content: Text("Contraseña o correo incorrectos"),
-            actions: <Widget>[
-              RaisedButton(
-                child: Text(
-                  "CERRAR",
-                  style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
-                ),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-              )
-            ],
-          );
-        });
+      context: context,
+      builder: (buildcontext) {
+        return AlertDialog(
+          title: Text("Vuelva a intentarlo"),
+          content: Text("Contraseña o correo incorrectos"),
+          actions: <Widget>[
+            RaisedButton(
+              child: Text(
+                "CERRAR",
+                style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+              ),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            )
+          ],
+        );
+      },
+    );
   }
 }

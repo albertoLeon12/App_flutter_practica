@@ -1,4 +1,5 @@
 import 'package:app_mamalona1/screens/Inteciones_screen.dart';
+import 'package:app_mamalona1/screens/fruitapp_screen.dart';
 import 'package:app_mamalona1/screens/saludo_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -42,7 +43,11 @@ class DashboarScreen extends StatelessWidget {
               subtitle: Text("Practica 1"),
               leading: Icon(Icons.payment),
               trailing: Icon(Icons.chevron_right),
-              onTap: () {}),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => FruitApp()));
+              }),
           ListTile(
               title: Text(
                 "Inteciones APP",

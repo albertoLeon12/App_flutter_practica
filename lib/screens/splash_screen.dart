@@ -11,7 +11,7 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SplashScreenView(
-      navigateRoute: FruitApp(),
+      navigateRoute: LoginScreen(),
       duration: 3000,
       imageSize: 130,
       imageSrc: "images/logo.png",
